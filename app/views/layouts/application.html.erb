@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>JudahsFoodProducts</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>JudahsFoodProducts</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <div class="store_name">
-      <h1>Judahs Inc.</h1>
+<body>
+  <header class='clearfix'>
+    <div class="right-nav">
+      <ul>
+        <li><%= link_to "Products", products_path %></li>
+      </ul>
     </div>
+  </header>
+  <div class="store_name">
+    <h1>Judah 1nc.</h1>
+  </div>
+  <div class='content'>
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
