@@ -8,4 +8,10 @@
   <p>No products to display</p>
 <% end %>
 
+<h3>Products made in the USA</h3>
+<% @products.usa.each do |usaProduct| %>
+  <p><%= link_to usaProduct.name, product_path(usaProduct) %></p>
+<% end %>
+
+
 <p><%= link_to "New Product", new_product_path %></p>
