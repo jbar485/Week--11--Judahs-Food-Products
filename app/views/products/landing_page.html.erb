@@ -6,3 +6,8 @@
 <% @products.three_most_recent.each do |three_most_recentProduct| %>
 <p><%= link_to three_most_recentProduct.name, product_path(three_most_recentProduct) %></p>
 <% end %>
+
+<h3>Product with the most Reviews</h3>
+<% @products.most_reviews.each do |most_reviewsProduct| %>
+<p><%= link_to most_reviewsProduct.name, product_path(most_reviewsProduct) %></p>
+<% end %>
