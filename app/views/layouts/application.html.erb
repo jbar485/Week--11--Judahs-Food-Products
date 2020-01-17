@@ -10,28 +10,37 @@
 </head>
 
 <body>
-  <header class='clearfix'>
-    <div class="right-nav">
-      <ul>
-        <li><%= link_to "Products", products_path %></li>
-      </ul>
+  <div class="foreground">
+    <header class='clearfix'>
+      <div class="right-nav">
+        <ul>
+          <li><%= link_to "Products", products_path %></li>
+        </ul>
+      </div>
+      <div class="right-nav">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+        </ul>
+      </div>
+    </header>
+    <div class="store_name">
+      <h1>Judah 1nc.</h1>
     </div>
-    <div class="right-nav">
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-      </ul>
+
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+
+
+    <div class='content'>
+      <%= yield %>
     </div>
-  </header>
-  <div class="store_name">
-    <h1>Judah 1nc.</h1>
   </div>
 
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
+<div class="midground">
 
-  
-  <div class='content'>
-    <%= yield %>
-  </div>
+</div>
+
+<div class="background">
+</div>
 </body>
 </html>
