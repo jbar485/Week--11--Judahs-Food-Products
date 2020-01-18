@@ -1,17 +1,20 @@
 <h3>Products</h3>
-
 <% if @products.any? %>
-  <% @products.each do |product| %>
-    <p><%= link_to product.name, product_path(product) %></p>
-  <% end %>
+<% @products.each do |product| %>
+<p><%= link_to product.name, product_path(product) %></p>
+<% end %>
 <% else %>
-  <p>No products to display</p>
+<p>No products to display</p>
 <% end %>
 
 <h3>Products made in the USA</h3>
+
+<% if @products.usa.any? %>
 <% @products.usa.each do |usaProduct| %>
-  <p><%= link_to usaProduct.name, product_path(usaProduct) %></p>
+<p><%= link_to usaProduct.name, product_path(usaProduct) %></p>
+<% end %>
+<% else %>
+<p>No products to display</p>
 <% end %>
 
-
-<p><%= link_to "New Product", new_product_path %></p>
+<%= link_to '<button type="button" class="button">New Product</button>'.html_safe, new_product_path %>

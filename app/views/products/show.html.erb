@@ -14,10 +14,10 @@
 <p>No reviews are listed for this product.</p>
 <% end %>
 
-<p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+<%= link_to '<button type="button" class="button">Add a Review</button>'.html_safe, new_product_review_path(@product) %>
 
 
-<p><%= link_to "Edit", edit_product_path(@product) %></p>
-<p><%= link_to "Delete", product_path(@product),
-  :data => {:confirm => "You sure?",
-  :method => "delete"} %></p>
+<%= link_to '<button type="button" class="button">Edit</button>'.html_safe, edit_product_path %>
+
+<%= link_to '<button type="button" class="button">Delete</button>'.html_safe, product_path(@product), :data => {:confirm => "You sure?",
+:method => "delete"}  %>
